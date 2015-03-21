@@ -1,0 +1,55 @@
+@import url(http://fonts.gstatic.com/s/lora/v9/5-AYViExptypIdFoLKAxTA.woff)
+/*=============================================================================
+ ** Variables
+ **==============================================================================
+//Menu container variable
+$menu_bg: #fff
+
+//list Items variables
+//links
+$link_hover_color: rgba(0, 0, 0, 0.5)
+
+// menu's font
+$menu_font: 'Lora', serif, Times
+
+/*=============================================================================
+ ** list-Items 
+ **==============================================================================
+
+.menu
+  background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.95)
+  text-align: center
+  text-transform: uppercase
+  letter-spacing: 1px
+  list-style-type: none
+  background-color: $menu_bg
+  +flex
+  +flex-d
+  align-items: center
+  justify-content: center
+  li
+    +flex
+    align-items: center
+    justify-content: center
+    a
+      padding: 1em
+      font-family: $menu_font
+      &:hover
+        color: $link_hover_color
+  &.active-bottom
+    border-bottom: 2px solid #98F5FF
+  &.vertical
+    +flex-d(false)
+  &.left
+    justify-content: flex-start
+  &.right
+    justify-content: flex-end
+      
+/*=============================================================================
+ ** 
+ **==============================================================================
+ 
+
+
+ 
+  
