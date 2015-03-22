@@ -12,7 +12,7 @@ $(document).on 'page:change', ->
 #on resize
  
     $(window).resize ->
-        if $('.menu-container').hasClass('fixed')
-            $('.start-content').css 'margin-top', $('.menu-container fixed').height()
+        if $('div').hasClass('menu-container fixed')
+            $('.start-content').css 'margin-top', $('.menu-container').height() + 20
     $(window).trigger 'resize'
     
