@@ -3,15 +3,18 @@ $(document).on 'page:change', ->
     $(".menu-toggle").on "click", ->
         if  $(".tablet-menu i").hasClass("fa-bars")
             $(".tablet-menu i").removeClass("fa-bars").addClass("fa-times")
-            $("ul .menu li").slideToggle()
+            $(".menu").slideToggle()
         else
-            $("tablet-menu i").addClass("fa-bars").fadeIn().removeClass("fa-times")
-            $("ul .menu li").slideToggle()
+            $(".tablet-menu i").addClass("fa-bars").fadeIn().removeClass("fa-times")
+            $(".menu").slideToggle()
 
 #on resize
- 
+#account for margin with fixed nav class
     $(window).resize ->
         if $('div').hasClass('menu-container fixed')
             $('.start-content').css 'margin-top', $('.menu-container').height() + 20
+        if $(window).width() > 1023
+            $('.menu').removeAttr('style');
+            
     $(window).trigger 'resize'
     

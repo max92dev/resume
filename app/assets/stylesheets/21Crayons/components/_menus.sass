@@ -1,15 +1,13 @@
 /*=============================================================================
  ** Variables
  **==============================================================================
-//Menu container variable
-$menu_bg: #fff
-
-//list Items variables
-//links
-$link_hover_color: rgba(0, 0, 0, 0.5)
 
 // menu's font
 $menu_font: 'Lora', serif, Times
+//menu li border color
+$li_border_color: #dfdfdf
+//links hover color
+$link_hover_color: rgba(0, 0, 0, 0.5)
 
 /*=============================================================================
  ** DRY
@@ -21,7 +19,6 @@ $menu_font: 'Lora', serif, Times
   text-transform: uppercase
   letter-spacing: 1px
   list-style-type: none
-  background-color: $menu_bg
   +flex
   +flex-horizontal
   align-items: center
@@ -35,6 +32,10 @@ $menu_font: 'Lora', serif, Times
       font-family: $menu_font
       &:hover
         color: $link_hover_color
+  &.bordered
+    li
+      border-right: 1px solid $li_border_color
+      
   &.active-bottom
     border-bottom: 2px solid #98F5FF
   &.vertical
@@ -58,8 +59,6 @@ $menu_font: 'Lora', serif, Times
  
 .menu
   @extend %menu_default
-
-
       
 /*=============================================================================
  **  Responsive
@@ -74,8 +73,11 @@ $menu_font: 'Lora', serif, Times
     align-items: center
     justify-content: flex-start
     li
-      border-left: 1px solid black
-      border-right: 1px solid black
+      &.menu-toggle
+        width: 100%
+        border-bottom: 1px solid $li_border_color
+        justify-content: flex-start
+        
       margin-right: 2%
     a
       padding: 1rem
