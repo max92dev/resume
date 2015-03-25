@@ -11,16 +11,16 @@ body
 
   .site-container
     .menu-container.fixed
-      ul.tablet-menu.c-100
+      ul.tablet-menu
         li
-          i.fa.fa-bars.fa-2x.menu-toggle.mobile-w-100
+          button.fa.fa-bars.fa-2x.menu-toggle
         li.fa.fa-clock-o.fa-lg  = link_to 'Hours','#hours'
         li.fa.fa-map-marker.fa-lg = link_to  "Location","https://www.google.com/maps/place/4439+Forest+Hill+Blvd,+West+Palm+Beach,+FL+33406"
-        li.fa.fa-facebook-square.fa-lg = link_to  "Facebook","https://www.facebook.com/Colombinobakery"
+        li = link_to  "Facebook","https://www.facebook.com/Colombinobakery", class: "fa.fa-facebook-square.fa-lg"
         li.fa.fa-twitter-square.fa-lg = link_to  "Twitter","https://twitter.com/colombinobakery"
       ul.menu
         li
-          a href=""  Home
+          a href="/home"  Home
         li
           a href="/home/about"  About
         li
