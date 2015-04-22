@@ -1,11 +1,11 @@
 $(document).on 'page:change', ->
 #set marging for fixed nav so content is visible
     $(".menu-toggle").on "click", ->
-        if  $(".tablet-menu i").hasClass("fa-bars")
-            $(".tablet-menu i").removeClass("fa-bars").addClass("fa-times")
+        if  $(".tablet-menu .menu-toggle").hasClass("fa-bars")
+            $(".tablet-menu .menu-toggle").removeClass("fa-bars").addClass("fa-times")
             $(".menu").slideToggle()
         else
-            $(".tablet-menu i").addClass("fa-bars").fadeIn().removeClass("fa-times")
+            $(".tablet-menu .menu-toggle").addClass("fa-bars").fadeIn().removeClass("fa-times")
             $(".menu").slideToggle()
 
 #on resize

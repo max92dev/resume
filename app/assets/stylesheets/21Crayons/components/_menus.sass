@@ -1,13 +1,19 @@
 /*=============================================================================
  ** Variables
  **==============================================================================
-
-// menu's font
-$menu_font: 'Lora', serif, Times
 //menu li border color
 $li_border_color: #dfdfdf
 //links hover color
 $link_hover_color: rgba(0, 0, 0, 0.5)
+/*======================================
+ ** Menu values 
+ **=====================================
+// menu's font
+$menu_font: 'Lora', serif, Times
+//link font size 
+$menu_font_size: 1rem
+//link padding
+$menu_link_padding: 1rem 1.5rem
 
 /*=============================================================================
  ** DRY
@@ -28,7 +34,7 @@ $link_hover_color: rgba(0, 0, 0, 0.5)
     align-items: center
     justify-content: center
     a
-      padding: 1rem 1.5rem
+      padding: $menu_link_padding
       font-family: $menu_font
       &:hover
         color: $link_hover_color
@@ -52,7 +58,7 @@ $link_hover_color: rgba(0, 0, 0, 0.5)
   @extend %menu_default
   display: none
   a
-    font-size: 1rem
+    font-size: $menu_font_size
 /*=============================================================================
  ** Regular Menu
  **==============================================================================
@@ -86,6 +92,13 @@ $link_hover_color: rgba(0, 0, 0, 0.5)
     li
       +flex-horizontal(false)
       width: 100%
+    &.bordered
+      li
+        border-bottom: 1px solid $li_border_color
     
- 
++small-tablet
+  .menu-toggle
+    margin-bottom: 1%
+  li
+    width: 47%
   
