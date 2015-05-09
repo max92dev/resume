@@ -1,18 +1,30 @@
+/*=============================================================================
+ ** Reusable colors
+ **============================================================================
+$green: #33FF99
+$yellow: #FFFF66
+$red: #FF6666
+$orange: #f39c12
+$purple: #9966FF
+$gray: #ecf0f1
+
+/*=============================================================================
+ ** Variables
+ **============================================================================
+
 $th_font_color: #222222 //table font color
-$th_backg_color:#ecf0f1
+$th_backg_color: $gray
 $tbl_font: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif 
 
+
 table
+  font: $tbl_font
   border: 1px solid #ccc
   width: 100%
   margin: 0
   padding: 0
   border-collapse: collapse
   border-spacing: 0
-  &.bordered
-    border-collapse: separate
-    border-spacing: 2px
-  
   tr
     border: 1px solid #ddd
     padding: 5px
@@ -27,36 +39,32 @@ table
     font-size: 0.77778rem
     font-weight: bold
     padding: 0.44444rem 0.55556rem 0.55556rem
-    
-.table
-  width: 600px 
-  overflow-x: scroll
-  margin-left: 5em
-  overflow-y: visible
-  padding-bottom: 1px
-
-  table
-    width: 100%
-    display: table-cell
-    line-height: 1rem
-    font-family: $tbl_font
+  &.bordered
     border-collapse: separate
     border-spacing: 2px
-    border-color: black
-    th
-     
-    tr
-      display: table-row
-      vertical-align: inherit
-      border-color: inherit
-      td:first-child
-        position: absolute
-        width: 5em
-        left: 0
-        top: auto
-        border-right: 0px none black
-        border-top-width: 3px
-        margin-top: -3px
+  &.alternate
+    tr:nth-child(even)
+      background: $gray
+    &.green
+      tr:nth-child(even)
+        background-color: $green
+    &.purple
+      tr:nth-child(even)
+        background: $purple
+    &.red
+      tr:nth-child(even)
+        background: $red
+    &.yellow
+      tr:nth-child(even)
+        background: $yellow
+    &.orange
+      tr:nth-child(even)
+        background: $orange
+      
+    
+/*=============================================================================
+ ** Responsive Grids 
+ **============================================================================
 
 +small-tablet 
   table
