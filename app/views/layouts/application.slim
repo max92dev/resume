@@ -12,20 +12,20 @@ body
   .site-container
     .menu-container.fixed
       ul.tablet-menu
-        li.fa.fa-bars.fa-2x.menu-toggle
+        li.fa.fa-bars.fa-2x.menu-toggle = link_to '','#'
         li = link_to 'Hours','#hours'
         li = link_to  "Location","https://www.google.com/maps/place/4439+Forest+Hill+Blvd,+West+Palm+Beach,+FL+33406"
         li = link_to  "Facebook","https://www.facebook.com/Colombinobakery"
         li = link_to  "Twitter","https://twitter.com/colombinobakery"
       ul.menu.bordered
         li
-          a href="/"  Home
+          a href="/"  Welcome
         li
-          a href="/home/about"  About
+          a href="/home/about"  Our Team
         li
-          a href="#"  Contact
+          a href="#"  Our Offering
         li
-          a href="#"  love
+          a href="#"  Contact Us
     .start-content
       = yield 
  
