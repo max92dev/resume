@@ -1,0 +1,27 @@
+$login_background: white
+$form_border_color: #ddd
+$sticky_label_color: black
+$sticky_label_background: #ccc
+$sticky_label_border: #ccc
+.form
+    border: 1px solid $form_border_color
+    .form-row
+        width: 100%
+        margin: 1% 0
+        margin:auto
+        input[type="radio"]
+            display: inline
+        input[type="email"], input[type="password"]
+            +border-radius(.3)
+            margin: 0 1% 
+            width: 98%
+            border: 1px solid #ddd
+            
+        
+.login-form 
+    background: $login_background
+    border: 1px solid $form_border_color
+    margin: 1% 
+
+                
+    
