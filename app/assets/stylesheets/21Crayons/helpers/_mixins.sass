@@ -4,9 +4,29 @@ $b_color: #27ae60 // background color
 $b_radius: .5     // bg border radius 
 
 /*=============================================================================
- ** Flex box
+ ** Transform/transform
  **============================================================================
- 
+
+=transform-style-fix($value)
+    -webkit-transform-style: $value
+    -moz-transform-style: $value
+    -ms-transform-style: $value
+    -o-transform-style: $value
+    transform-style: $value
+    
+=transform-fix($value)
+    -moz-transform: $value
+    -o-transform: $value
+    -webkit-transform: $value
+    -ms-transform: $value
+    transform: $value
+
+=transition-fix($value)
+    -moz-transition: $value
+    -o-transition: $value
+    -webkit-transition: $value
+    -ms-transition: $value
+    transition: $value
 
 /*=============================================================================
  ** Flex box
