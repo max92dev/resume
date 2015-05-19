@@ -8,9 +8,6 @@ html
     = csrf_meta_tags
    
 body
-
-
-  .parallax
     .menu-container.fixed
       ul.tablet-menu
         li.fa.fa-bars.fa-2x.menu-toggle = link_to '','#'
@@ -18,7 +15,7 @@ body
         li = link_to  "Location","https://www.google.com/maps/place/4439+Forest+Hill+Blvd,+West+Palm+Beach,+FL+33406"
         li = link_to  "Facebook","https://www.facebook.com/Colombinobakery"
         li = link_to  "Twitter","https://twitter.com/colombinobakery"
-      ul.menu.bordered
+      ul.menu.bordered.horizontal
         li
           a href="/"  Welcome
         li
